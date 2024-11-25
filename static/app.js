@@ -4,7 +4,6 @@ const priceTag = document.querySelector(".price-tag");
 const emotionDisplay = document.getElementById("emotion-display");
 const confidenceDisplay = document.getElementById("confidence-display");
 
-// Array of car images and prices
 const cars = [
     { src: "https://i.ibb.co/6wSb4Br/car1.jpg", price: "$400,000" },
     { src: "https://i.ibb.co/GVym4Fz/car2.jpg", price: "$450,000" },
@@ -16,14 +15,12 @@ const cars = [
 
 let currentCarIndex = 0;
 
-// Function to switch car image and price
 function switchCar() {
     currentCarIndex = (currentCarIndex + 1) % cars.length;
     carImage.src = cars[currentCarIndex].src;
     priceTag.textContent = cars[currentCarIndex].price;
 }
 
-// Function to change background color based on emotion
 function changeBackgroundColor(emotion) {
     let color;
 
@@ -53,7 +50,6 @@ function changeBackgroundColor(emotion) {
     document.body.style.backgroundColor = color;
 }
 
-// WebSocket configuration
 const socket = new WebSocket("ws://127.0.0.1:8080/real-time-emotion");
 
 socket.onopen = () => {
