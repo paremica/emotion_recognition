@@ -18,17 +18,16 @@ This project demonstrates a **Real-Time Emotion Detection System** that evaluate
 ---
 
 ## Math Behind Emotion Detection
+
 The emotion detection is modeled as a **multi-class classification problem**, where each emotion is treated as a separate class. The model minimizes the **categorical cross-entropy loss**:
 
-\[
-\mathcal{L} = -\frac{1}{N} \sum_{i=1}^{N} \sum_{j=1}^{C} y_{ij} \log(\hat{y}_{ij})
-\]
+L = -(1/N) * Σ[i=1 to N] Σ[j=1 to C] y_ij * log(ŷ_ij)
 
 Where:
-- \( N \): Total number of samples.
-- \( C \): Number of classes (e.g., happy, angry, etc.).
-- \( y_{ij} \): True label for class \( j \) of sample \( i \).
-- \( \hat{y}_{ij} \): Predicted probability for class \( j \) of sample \( i \).
+- N: Total number of samples.
+- C: Number of classes (e.g., happy, angry, etc.).
+- y_ij: True label for class j of sample i.
+- ŷ_ij: Predicted probability for class j of sample i.
 
 The emotion with the highest predicted probability is selected as the output.
 
