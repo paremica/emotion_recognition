@@ -26,25 +26,25 @@ function changeBackgroundColor(emotion) {
 
     switch (emotion) {
         case "happy":
-            color = "#008000"; // Green
+            color = "#008000"; 
             break;
         case "surprise":
-            color = "#90EE90"; // Light green
+            color = "#90EE90"; 
             break;
         case "neutral":
-            color = "#FFFF00"; // Yellow
+            color = "#FFFF00";
             break;
         case "disgust":
-            color = "#FFA07A"; // Light red
+            color = "#FFA07A"; 
             break;
         case "angry":
-            color = "#FF0000"; // Red
+            color = "#FF0000"; 
             break;
         case "fear":
-            color = "#FFA500"; // Orange
+            color = "#FFA500"; 
             break;
         default:
-            color = "#f5f5f5"; // Default background
+            color = "#f5f5f5"; 
     }
 
     document.body.style.backgroundColor = color;
@@ -60,18 +60,14 @@ socket.onmessage = (event) => {
     const data = JSON.parse(event.data);
 
     if (data.emotions && data.emotions.length > 0) {
-        // Process the first detected emotion
         const emotionData = data.emotions[0]; // Take the first detected emotion
         const { emotion, confidence } = emotionData;
 
-        // Update the emotion and confidence display
         emotionDisplay.textContent = `Emotion: ${emotion}`;
         confidenceDisplay.textContent = `Confidence: ${(confidence * 100).toFixed(2)}%`;
 
-        // Change background color based on emotion
         changeBackgroundColor(emotion);
 
-        // Switch car image for positive or neutral emotions
         if (emotion === "angry" || emotion === "fear" || emotion === "disgust") {
             setTimeout(switchCar, 2000);
         }
@@ -89,7 +85,6 @@ socket.onclose = () => {
     console.log("WebSocket connection closed.");
 };
 
-// Access the camera
 if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
     navigator.mediaDevices.getUserMedia({ video: true })
         .then((stream) => {
