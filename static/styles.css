@@ -1,4 +1,3 @@
-/* Estilo general */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -13,15 +12,14 @@ body {
 }
 
 .container {
-    width: 90%; /* Maximiza el ancho del contenedor */
+    width: 90%; 
     max-width: 1200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 90%; /* Aprovecha casi toda la altura */
+    height: 90%; 
 }
 
-/* Encabezado */
 header {
     text-align: center;
     margin-bottom: 20px;
@@ -40,7 +38,6 @@ header p {
     margin: 5px 0 0;
 }
 
-/* Contenido principal */
 .content {
     display: flex;
     justify-content: space-between;
@@ -51,18 +48,16 @@ header p {
     width: 100%;
 }
 
-/* Video de la cámara */
 video {
-    width: 45%; /* Ajusta el ancho del video */
-    height: 90%; /* Maximiza el uso vertical */
+    width: 45%; 
+    height: 90%; 
     border-radius: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     border: 3px solid #203E6B;
 }
 
-/* Panel lateral derecho (contenedor de imágenes) */
 .right-panel {
-    width: 50%; /* Ajusta para ser más grande que el video */
+    width: 50%; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -103,15 +98,14 @@ video {
     border-radius: 5px;
 }
 
-/* Lista de emociones (Termómetro a la izquierda) */
 .emotion-selector {
-    position: absolute; /* Permite fijarlo en la esquina izquierda */
+    position: absolute; 
     top: 10%;
     left: 2%;
-    width: 15%; /* Ajusta el tamaño del termómetro */
+    width: 15%; 
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Alinea los botones a la izquierda */
+    align-items: flex-start; 
     gap: 10px;
 }
 
@@ -125,7 +119,7 @@ video {
     list-style: none;
     padding: 0;
     display: flex;
-    flex-direction: column; /* Alinea los botones verticalmente */
+    flex-direction: column; 
     gap: 10px;
 }
 
