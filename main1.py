@@ -11,7 +11,6 @@ import cv2
 import numpy as np
 import asyncio
 
-# Load the trained model and label encoder
 try:
     model = load_model("emotion_model.h5")
     label_classes = np.load("label_encoder_classes.npy", allow_pickle=True)
@@ -20,7 +19,6 @@ except Exception as e:
     print(f"Error loading model or label encoder: {e}")
     raise
 
-# Haarcascade for face detection
 haar_file = cv2.data.haarcascades + 'haarcascade_frontalface_default.xml'
 face_cascade = cv2.CascadeClassifier(haar_file)
 if face_cascade.empty():
@@ -28,10 +26,8 @@ if face_cascade.empty():
     raise Exception("Haarcascade file not loaded successfully.")
 print("Haarcascade loaded successfully.")
 
-# FastAPI Application
 app = FastAPI()
 
-# Mount the static files directory
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
@@ -43,7 +39,6 @@ def read_root():
         return {"error": str(e)}
 
 
-# CORS Middleware Configuration
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # Allow all origins for testing. Restrict in production.
