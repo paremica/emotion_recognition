@@ -1,0 +1,146 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    transition: background-color 0.5s ease;
+}
+
+.container {
+    width: 90%; /* Maximiza el ancho del contenedor */
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90%; /* Aprovecha casi toda la altura */
+}
+
+/* Encabezado */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #203E6B;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #3873CB;
+    margin: 5px 0 0;
+}
+
+/* Contenido principal */
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-grow: 1;
+    height: 100%;
+    width: 100%;
+}
+
+/* Video de la cámara */
+video {
+    width: 45%; /* Ajusta el ancho del video */
+    height: 90%; /* Maximiza el uso vertical */
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 3px solid #203E6B;
+}
+
+/* Panel lateral derecho (contenedor de imágenes) */
+.right-panel {
+    width: 50%; /* Ajusta para ser más grande que el video */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Imagen del carro */
+.car-display {
+    position: relative;
+    width: 100%;
+    height: 90%; /* Aprovecha el espacio vertical */
+    border-radius: 20px;
+}
+
+.car-display img {
+    width: 100%;
+    height: 100%; /* Imagen escalada proporcionalmente */
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 3px solid #3873CB;
+}
+
+.confidence-display {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 16px;
+    color: #555;
+}
+
+.price-tag {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+/* Lista de emociones (Termómetro a la izquierda) */
+.emotion-selector {
+    position: absolute; /* Permite fijarlo en la esquina izquierda */
+    top: 10%;
+    left: 2%;
+    width: 15%; /* Ajusta el tamaño del termómetro */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea los botones a la izquierda */
+    gap: 10px;
+}
+
+.emotion-selector h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #203E6B;
+}
+
+.emotion-selector ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Alinea los botones verticalmente */
+    gap: 10px;
+}
+
+.emotion-selector ul li {
+    background-color: #e6e6e6;
+    margin: 0;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.emotion-selector ul li:hover {
+    background-color: #d1d1d1;
+    transform: scale(1.05);
+}
