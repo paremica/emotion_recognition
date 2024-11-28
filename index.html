@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Emotion Detection</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Real-Time Emotion Detection</h1>
+        <div class="content">
+            <!-- Webcam Video Feed -->
+            <video id="video" autoplay muted></video>
+
+            <!-- Emotion and Confidence Display -->
+            <div class="emotion-display">
+                <p id="emotion-display">Emotion: N/A</p>
+                <p id="confidence-display">Confidence: N/A</p>
+            </div>
+
+            <!-- Car Image and Price -->
+            <div class="car-display">
+                <img id="car-image" src="https://i.ibb.co/6wSb4Br/car1.jpg" alt="Car Image">
+                <div class="price-tag">$400,000</div>
+            </div>
+        </div>
+    </div>
+    <script src="/static/app.js"></script>
+</body>
+</html>
